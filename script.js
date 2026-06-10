@@ -5,6 +5,72 @@
 (function () {
   "use strict";
 
+  /* ---------- HERO BACKGROUND SLIDER ---------- */
+  const heroImages = [
+    "images/Gemini_Generated_Image_m3vckcm3vckcm3vc.png",
+    "images/e4bb87be-6221-4b55-80dc-305d5354cf03.jpeg",
+    "images/de4fe0e7-a7cf-4eaf-bdb9-bb053280e89b.jpeg",
+    "images/Gemini_Generated_Image_hrgf7uhrgf7uhrgf.png",
+    "images/Gemini_Generated_Image_8wi7xt8wi7xt8wi7.png",
+    "images/Gemini_Generated_Image_r74bfsr74bfsr74b.png",
+    "images/Gemini_Generated_Image_gl8ni9gl8ni9gl8n.png",
+  ];
+  const slider = document.getElementById("heroSlider");
+  const dotsWrap = document.getElementById("heroDots");
+
+  if (slider) {
+    const slides = [];
+    const dots = [];
+    heroImages.forEach((src, i) => {
+      const s = document.createElement("div");
+      s.className = "hero__slide" + (i === 0 ? " is-active" : "");
+      s.style.backgroundImage = 'url("' + src + '")';
+      slider.appendChild(s);
+      slides.push(s);
+
+      if (dotsWrap) {
+        const d = document.createElement("button");
+        d.type = "button";
+        d.setAttribute("role", "tab");
+        d.setAttribute("aria-label", "Show image " + (i + 1));
+        if (i === 0) d.classList.add("is-active");
+        d.addEventListener("click", () => go(i, true));
+        dotsWrap.appendChild(d);
+        dots.push(d);
+      }
+    });
+
+    // preload
+    heroImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+
+    let cur = 0;
+    let timer = null;
+    const DELAY = 5000;
+
+    function go(n, manual) {
+      slides[cur].classList.remove("is-active");
+      if (dots[cur]) dots[cur].classList.remove("is-active");
+      cur = (n + slides.length) % slides.length;
+      slides[cur].classList.add("is-active");
+      if (dots[cur]) dots[cur].classList.add("is-active");
+      if (manual) restart();
+    }
+    function next() { go(cur + 1, false); }
+    function start() { timer = window.setInterval(next, DELAY); }
+    function restart() { if (timer) window.clearInterval(timer); start(); }
+
+    if (slides.length > 1) start();
+
+    // pause when tab hidden
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) { if (timer) window.clearInterval(timer); }
+      else if (slides.length > 1) restart();
+    });
+  }
+
   /* ---------- NAV: scrolled state + mobile toggle ---------- */
   const nav = document.getElementById("nav");
   const toggle = document.querySelector(".nav__toggle");
