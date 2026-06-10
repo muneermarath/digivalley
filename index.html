@@ -47,8 +47,6 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
-    <div class="hero__slider" id="heroSlider" aria-hidden="true"></div>
-    <div class="hero__scrim"></div>
     <div class="hero__wash hero__wash--a" data-parallax="0.18"></div>
     <div class="hero__wash hero__wash--b" data-parallax="0.32"></div>
 
@@ -61,7 +59,10 @@
       </div>
     </div>
 
-    <div class="hero__dots" id="heroDots" role="tablist" aria-label="Hero gallery"></div>
+    <figure class="hero__gallery reveal">
+      <div class="hero__slider" id="heroSlider" aria-hidden="true"></div>
+      <div class="hero__dots" id="heroDots" role="tablist" aria-label="Hero gallery"></div>
+    </figure>
 
     <a href="#vision" class="hero__scroll" aria-label="Scroll to explore">
       <span>scroll</span>
