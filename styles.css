@@ -141,8 +141,8 @@ em{ font-style:italic; color:var(--sage-deep); }
 }
 @keyframes floaty{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
 .hero__logo{
-  font-size:clamp(3rem,11vw,7.5rem); font-weight:300; letter-spacing:-1.5px;
-  line-height:.92;
+  font-size:clamp(2.6rem,8.5vw,6rem); font-weight:300; letter-spacing:-1px;
+  line-height:1.02; max-width:13ch; text-wrap:balance;
   background:linear-gradient(135deg,var(--sage-deep) 0%, var(--mist-deep) 45%, var(--terra-deep) 100%);
   -webkit-background-clip:text; background-clip:text; color:transparent;
 }
