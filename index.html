@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digivalley — Wayanad Vision 2030</title>
+  <meta name="description" content="Wayanad Digi-Valley 2030 — a watercolour vision for India's first distributed, carbon-neutral green digital corridor along the Western Ghats." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Paper grain + watercolour SVG filters ===== -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="paper">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
+        <feColorMatrix in="noise" type="saturate" values="0"/>
+        <feComponentTransfer><feFuncA type="linear" slope="0.045"/></feComponentTransfer>
+        <feComposite operator="over" in2="SourceGraphic"/>
+      </filter>
+      <filter id="watercolour">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="4" seed="7" result="turb"/>
+        <feDisplacementMap in="SourceGraphic" in2="turb" scale="22" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ===== Simple nav ===== -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand">Digivalley</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#vision">Vision</a>
+      <a href="#unesco">UNESCO</a>
+      <a href="#hub">Next IT Hub</a>
+      <a href="#proposal">Proposal</a>
+      <a href="#visionaries">Visionaries</a>
+      <a href="#join" class="nav__cta">Join Hands</a>
+    </nav>
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__wash hero__wash--a" data-parallax="0.18"></div>
+    <div class="hero__wash hero__wash--b" data-parallax="0.32"></div>
+    <div class="hero__wash hero__wash--c" data-parallax="0.10"></div>
+
+    <div class="hero__inner">
+      <p class="hero__eyebrow reveal">Wayanad · Western Ghats · 2030</p>
+      <img class="hero__logo-img reveal" src="logo.png" alt="Wayanad Digivalley logo — a watercolour mark of green hills, a river and a solar panel" loading="eager" />
+      <h1 class="hero__logo reveal">Digivalley</h1>
+      <p class="hero__tag reveal">A watercolour vision for India's first distributed, carbon-neutral green digital corridor.</p>
+    </div>
+
+    <figure class="hero__art" data-parallax="0.06">
+      <img src="images/Gemini_Generated_Image_m3vckcm3vckcm3vc.png" alt="Watercolour concept of the Wayanad Digivalley entrance arch set in the misty Western Ghats" loading="eager" />
+    </figure>
+
+    <a href="#vision" class="hero__scroll" aria-label="Scroll to explore">
+      <span>scroll</span>
+      <i></i>
+    </a>
+  </section>
+
+  <!-- ===== 1. VISION ===== -->
+  <section class="section section--vision" id="vision">
+    <div class="blob blob--sage" data-parallax="0.14"></div>
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="kicker">01 — Vision</span>
+        <h2>Vision Wayanad <em>Digivalley 2030</em></h2>
+      </div>
+      <div class="vision__grid">
+        <div class="vision__lead reveal">
+          <p class="lead">Wayanad, cradled by the majestic Western Ghats, is uniquely poised to pioneer a distributed, high‑AQI green digital corridor — transforming remote villages into low‑density, high‑value tech sanctuaries.</p>
+          <p>Rather than competing with Bengaluru or Kochi, Digivalley becomes an elite <strong>“decompression &amp; deep‑work zone”</strong> for high‑skill knowledge workers, global digital nomads, and enterprise R&amp;D retreats — channelling corporate capital directly into rural agricultural micro‑economies while preserving a pristine micro‑climate.</p>
+        </div>
+        <ul class="pillars">
+          <li class="pillar reveal" style="--i:0">
+            <span class="pillar__ico">🌿</span>
+            <h3>Green IT Infra</h3>
+            <p>Dual‑screen pods, Starlink &amp; dark‑fiber, solar microgrids.</p>
+          </li>
+          <li class="pillar reveal" style="--i:1">
+            <span class="pillar__ico">♻️</span>
+            <h3>Regenerative Eco</h3>
+            <p>UNESCO‑aligned, zero‑waste hubs with a net‑zero footprint.</p>
+          </li>
+          <li class="pillar reveal" style="--i:2">
+            <span class="pillar__ico">🌾</span>
+            <h3>Agri‑Community</h3>
+            <p>Micro‑revenues, homestay uplift, land‑lease prosperity.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="stats reveal">
+        <div class="stat"><b>50+</b><span>Micro‑hubs by 2030</span></div>
+        <div class="stat"><b>Net‑Zero</b><span>Carbon design footprint</span></div>
+        <div class="stat"><b>3 Tiers</b><span>Of distributed workspace</span></div>
+        <div class="stat"><b>0</b><span>Diesel generators</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. UNESCO ===== -->
+  <section class="section section--unesco" id="unesco">
+    <div class="blob blob--mist" data-parallax="0.20"></div>
+    <div class="wrap split">
+      <figure class="split__media reveal">
+        <img src="images/e4bb87be-6221-4b55-80dc-305d5354cf03.jpeg" alt="Watercolour aerial of the Digivalley IT campus nestled in the green hills" loading="lazy" />
+        <figcaption>Low‑impact, elevated structures honouring the heritage landscape.</figcaption>
+      </figure>
+      <div class="split__body">
+        <div class="section__head reveal">
+          <span class="kicker">02 — Heritage</span>
+          <h2>UNESCO Western Ghats <em>Anchor</em></h2>
+        </div>
+        <p class="reveal">Wayanad is a core component of the Nilgiri Biosphere Reserve, inscribed within the <a href="https://whc.unesco.org/en/list/1342" target="_blank" rel="noopener">UNESCO Western Ghats World Heritage List</a>. This status mandates stringency — Digivalley avoids large concrete footprints, opting for modular, elevated structures that never disrupt elephant corridors, endemic flora, or hydrological flows.</p>
+        <ul class="ticks">
+          <li class="reveal">Honours the Neolithic engravings of the <a href="https://www.keralatourism.org/destination/edakkal-caves-wayanad/220" target="_blank" rel="noopener">Edakkal Caves</a> through a minimalist, low‑height design syntax.</li>
+          <li class="reveal">Traditional Kerala terracotta tiles, exposed stone, and sustainable bamboo architecture.</li>
+          <li class="reveal">Underground fiber &amp; mesh Wi‑Fi — no unsightly overhead cabling through sensitive forest zones.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. NEXT IT HUB ===== -->
+  <section class="section section--hub" id="hub">
+    <div class="blob blob--teal" data-parallax="0.16"></div>
+    <div class="wrap">
+      <div class="section__head reveal center">
+        <span class="kicker">03 — Infrastructure</span>
+        <h2>The Next <em>IT Hub</em></h2>
+        <p class="sub">Three interlinked spatial tiers keep human density within ecologically safe thresholds.</p>
+      </div>
+
+      <div class="tiers">
+        <article class="tier reveal" style="--i:0">
+          <span class="tier__lvl">Level 1</span>
+          <h3>Anchor Stations</h3>
+          <p>High‑density, corporate‑grade transit nodes in Kalpetta, Sultan Bathery &amp; Mananthavady. Dual‑screen terminals, IoT testing beds, seminar halls.</p>
+          <span class="tier__cap">100–150 seats</span>
+        </article>
+        <article class="tier reveal" style="--i:1">
+          <span class="tier__lvl">Level 2</span>
+          <h3>Canopy Sanctuaries</h3>
+          <p>Premium stilted, glass‑walled workspaces above the terrain at forest edges — a “cabin in the woods” aesthetic with wellness &amp; meditation loops.</p>
+          <span class="tier__cap">30–50 seats</span>
+        </article>
+        <article class="tier reveal" style="--i:2">
+          <span class="tier__lvl">Level 3</span>
+          <h3>Farm‑Desks &amp; Pods</h3>
+          <p>Solar‑powered single‑user pods inside working coffee, tea, pepper &amp; cardamom plantations. Work, then step out to harvest.</p>
+          <span class="tier__cap">1–5 pods / estate</span>
+        </article>
+      </div>
+
+      <figure class="hub__art reveal" data-parallax="0.05">
+        <img src="images/de4fe0e7-a7cf-4eaf-bdb9-bb053280e89b.jpeg" alt="Watercolour interior of a bamboo coworking sanctuary with misty valley views" loading="lazy" />
+      </figure>
+
+      <div class="specs">
+        <h3 class="reveal">Eco‑Computing Specifications</h3>
+        <div class="specs__grid">
+          <div class="spec reveal" style="--i:0"><b>Power</b><p>Decoupled microgrids — thin‑film monocrystalline solar paired with LiFePO4 storage. Zero diesel, zero acoustic noise.</p></div>
+          <div class="spec reveal" style="--i:1"><b>Connectivity</b><p>Hybrid ring — underground dark fiber coupled with directional LEO satellite mesh (Starlink / OneWeb).</p></div>
+          <div class="spec reveal" style="--i:2"><b>Ergonomics</b><p>Dual‑screen, USB‑C single‑cable docks, universal Bluetooth testing arrays on low‑voltage DC.</p></div>
+          <div class="spec reveal" style="--i:3"><b>Thermal</b><p>Passive venting, radiant floor cooling, shaded eave geometry — no power‑hungry HVAC compressors.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. VISION PROPOSAL ===== -->
+  <section class="section section--proposal" id="proposal">
+    <div class="blob blob--terra" data-parallax="0.18"></div>
+    <div class="wrap">
+      <div class="section__head reveal center">
+        <span class="kicker">04 — The Proposal</span>
+        <h2>Vision <em>Proposal</em></h2>
+        <p class="sub">A Public‑Private‑Community Partnership that reverses the inequities of conventional IT parks.</p>
+      </div>
+
+      <div class="proposal__grid">
+        <article class="pcard reveal" style="--i:0">
+          <h3>Land‑Lease Model</h3>
+          <p>Farmers retain full title. The state leases micro‑parcels (150 sq ft) for Tier‑3 pods — farmers earn fixed yields plus a share of pod bookings.</p>
+        </article>
+        <article class="pcard reveal" style="--i:1">
+          <h3>Agri‑Tourism Spillover</h3>
+          <p>Visiting professionals buy GI‑tagged Wayanad Robusta, organic pepper &amp; forest honey direct from source — no middle‑men.</p>
+        </article>
+        <article class="pcard reveal" style="--i:2">
+          <h3>Local Hospitality Grid</h3>
+          <p>Homestays upskilled via grants to deliver premium hospitality &amp; organic dining, circulating wealth into the village economy.</p>
+        </article>
+      </div>
+
+      <div class="roadmap">
+        <h3 class="reveal">Implementation Roadmap</h3>
+        <ol class="phases">
+          <li class="phase reveal" style="--i:0">
+            <span class="phase__n">Phase 1</span>
+            <span class="phase__t">Months 1–6</span>
+            <p>Site audits &amp; approvals · blueprint validation · UNESCO buffer audits.</p>
+          </li>
+          <li class="phase reveal" style="--i:1">
+            <span class="phase__n">Phase 2</span>
+            <span class="phase__t">Months 7–18</span>
+            <p>Pilot deployment of 5 hubs · initial power grids · anchor‑node testing.</p>
+          </li>
+          <li class="phase reveal" style="--i:2">
+            <span class="phase__n">Phase 3</span>
+            <span class="phase__t">Months 19–36</span>
+            <p>Full district rollout · 50+ interlinked hubs · enterprise subscriptions.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="horizons reveal">
+        <h3>Future Horizons — Wayanad 2035 &amp; beyond</h3>
+        <p>An Agri‑AI Research Incubator for drone precision agriculture · a Global Retreat Corridor as Asia's premier carbon‑neutral deep‑work zone · subterranean green data vaults cooled naturally by groundwater flows.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. VISIONARIES ===== -->
+  <section class="section section--visionaries" id="visionaries">
+    <div class="blob blob--lav" data-parallax="0.22"></div>
+    <div class="wrap">
+      <div class="section__head reveal center">
+        <span class="kicker">05 — The People</span>
+        <h2>The <em>Visionaries</em></h2>
+        <p class="sub">Mentors, architects &amp; champions guiding Digivalley from blueprint to a living valley.</p>
+      </div>
+      <div class="people" id="people" aria-label="Visionary profiles"></div>
+      <p class="people__note reveal">Profiles are illustrative placeholders — ready to be replaced with your confirmed mentor roster.</p>
+    </div>
+  </section>
+
+  <!-- ===== 6. JOIN HANDS ===== -->
+  <section class="section section--join" id="join">
+    <div class="blob blob--sage2" data-parallax="0.14"></div>
+    <div class="wrap">
+      <div class="section__head reveal center">
+        <span class="kicker">06 — Get Involved</span>
+        <h2>Join <em>Hands</em></h2>
+        <p class="sub">Help shape the valley — partner, fund, host, or simply share an idea.</p>
+      </div>
+
+      <div class="join__grid">
+        <article class="join__card reveal" style="--i:0">
+          <span class="join__ico">🏛️</span><h3>Government &amp; Policy</h3>
+          <p>Co‑form the Wayanad Digi‑Valley Development Authority (WDDA) and unlock Phase 1 site allocations.</p>
+        </article>
+        <article class="join__card reveal" style="--i:1">
+          <span class="join__ico">💼</span><h3>Enterprise Partners</h3>
+          <p>Reserve deep‑work retreats &amp; R&amp;D residencies — anchor subscriptions that fund the grid.</p>
+        </article>
+        <article class="join__card reveal" style="--i:2">
+          <span class="join__ico">🌱</span><h3>Plantation &amp; Homestays</h3>
+          <p>Lease micro‑parcels for pods and upskill hospitality to host the world's remote workers.</p>
+        </article>
+        <article class="join__card reveal" style="--i:3">
+          <span class="join__ico">💡</span><h3>Ideas &amp; Volunteers</h3>
+          <p>Designers, ecologists, technologists &amp; locals — every suggestion shapes the blueprint.</p>
+        </article>
+      </div>
+
+      <form class="join__form reveal" onsubmit="return false;">
+        <div class="field"><label>Name</label><input type="text" placeholder="Your name" /></div>
+        <div class="field"><label>Email</label><input type="email" placeholder="you@example.com" /></div>
+        <div class="field"><label>I'd like to</label>
+          <select>
+            <option>Partner as an enterprise</option>
+            <option>Offer plantation / homestay land</option>
+            <option>Support as government / policy</option>
+            <option>Volunteer skills &amp; ideas</option>
+            <option>Just share a suggestion</option>
+          </select>
+        </div>
+        <div class="field field--full"><label>Your message / suggestion</label><textarea rows="3" placeholder="Tell us how you'd like to join hands…"></textarea></div>
+        <button class="btn" type="submit">Send a smoke signal 🌿</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p class="foot__logo">Digivalley</p>
+    <p>Wayanad Digi‑Valley 2030 — a concept vision for sustainable rural IT infrastructure along the UNESCO Western Ghats.</p>
+    <p class="foot__fine">Public‑Private‑Community Partnership · Concept proposal · © 2030</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
